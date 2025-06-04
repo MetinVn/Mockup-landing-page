@@ -1,5 +1,10 @@
-import { Button, ButtonSecondary } from "../components/Button";
-import { ItemProps } from "../components/Hero";
+import { Button } from "../components/ui/Button";
+
+type ItemProps = {
+  img: string;
+  title: string;
+  paragraph: string;
+};
 
 type TopPartProps = {
   subHeader: string;
@@ -36,14 +41,14 @@ export const HeroTop = (props: TopPartProps) => {
               placeholder="Your Email"
             />
             <div className="absolute top-0 bottom-0 right-[6px] flex items-center">
-              <Button type="button" padding="px-2 py-2 lg:py-[7px] lg:px-10" name="Start For Free" />
+              <Button variant="primary" padding="px-2 py-2 lg:py-[7px] lg:px-10" children="Start For Free" />
             </div>
           </div>
         </form>
       )}
       {props.display === "button" && (
         <div className="pt-5">
-          <ButtonSecondary type="button" name="Create an Account" />
+          <Button variant="secondary" children="Create an Account" />
         </div>
       )}
 

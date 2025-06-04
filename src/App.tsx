@@ -1,16 +1,11 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <div className="bg-[var(--color-lightDark)] min-h-screen h-auto w-full">
-        <Header />
-        <Hero />
-        <Footer />
-      </div>
-    </>
+    <Routes>
+      <Route index path="/" element={<Home />} />
+    </Routes>
   );
 }
 

@@ -1,4 +1,4 @@
-import { ButtonSecondary, ButtonThird } from "../components/Button";
+import { Button } from "../components/ui/Button";
 
 type HeroBottomProps = {
   header: string;
@@ -17,15 +17,17 @@ export const HeroBottom = (props: HeroBottomProps) => {
         props.reverseSides ? "md:flex-row-reverse" : "md:flex-row"
       } items-center justify-center gap-8 md:gap-20 ${
         props.bgColor === "dark" ? "bg-[var(--color-gray)]" : "bg-[var(--color-green)]"
-      } p-6 md:p-10`}>
+      } p-6 md:p-10`}
+    >
       <div
         className={`flex flex-col w-full md:w-1/2 max-w-[500px] space-y-7 ${
           props.bgColor === "dark" ? "text-[var(--color-white)]" : "text-[var(--color-dark)]"
-        } text-center md:text-start`}>
+        } text-center md:text-start`}
+      >
         <h1 className="text-4xl md:text-5xl font-medium">{props.header}</h1>
         <p className="text-sm font-medium">{props.paragraph}</p>
-        {props.buttonType === "second" && <ButtonSecondary type="button" name={props.buttonText} />}
-        {props.buttonType === "third" && <ButtonThird type="button" name={props.buttonText} />}
+        {props.buttonType === "second" && <Button variant="secondary" children={props.buttonText} />}
+        {props.buttonType === "third" && <Button variant="tertiary" children={props.buttonText} />}
       </div>
 
       <div className="w-fit flex justify-center">
