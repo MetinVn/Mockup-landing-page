@@ -18,7 +18,7 @@ A modern, responsive landing page built with React, TypeScript, and Vite. This p
 
 ## Project Overview
 
-This project is a static mockup landing page designed to showcase a clean, scalable, and maintainable front-end codebase. It serves as a template for modern web applications, focusing on best practices and a professional UI.
+This project is a static mockup landing page built with React and TypeScript. It focuses on maintainability, reusability, and a clean UI using modern front-end tools and patterns.
 
 ---
 
@@ -37,11 +37,8 @@ This project is a static mockup landing page designed to showcase a clean, scala
 
 - **React** (with functional components and hooks)
 - **TypeScript** (for static type checking)
-- **Vite** (for fast development and build tooling)
 - **Tailwind CSS** (utility-first CSS framework)
 - **React Router** (for routing)
-- **ESLint** (for code quality)
-- **React Icons** (for scalable vector icons)
 
 ---
 
@@ -62,13 +59,14 @@ This project is a static mockup landing page designed to showcase a clean, scala
 
 ## Reason for Building
 
-This app was built to demonstrate a professional approach to front-end development, even for static pages. The goal is to show recruiters and collaborators a codebase that is:
+I built this app to demonstrate my ability to translate a design into a pixel-perfect, responsive, and modern front-end implementation. The project showcases my skills in:
 
-- Scalable and easy to maintain
-- Aligned with modern development standards
-- Ready for extension with routing, state management, or API integration
+- Building clean, maintainable, and reusable React components
+- Applying precise styling and layout techniques for pixel-perfect results
+- Using TypeScript for type safety and reliability
+- Structuring a scalable codebase that follows current best practices
 
----
+This project serves as a practical example of my front-end development abilities and attention to detail.
 
 ## Getting Started
 
