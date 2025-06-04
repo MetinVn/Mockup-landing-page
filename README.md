@@ -25,32 +25,38 @@ This project is a static mockup landing page designed to showcase a clean, scala
 ## Features
 
 - Responsive design for mobile and desktop
-- Modular, reusable React components (Header, Hero, Footer)
-- Custom theming with CSS variables
+- Modular, reusable React components (Header, Hero, Footer, Buttons, etc.)
+- Custom theming with CSS variables and Tailwind CSS
 - Type safety with TypeScript
-- Clean and organized project structure
-- Easy to extend for future features or pages
+- Organized and scalable project structure
+- Easy to extend for future features, pages, or API integration
 
 ---
 
 ## Technology Used
 
-- **React** (with functional components)
+- **React** (with functional components and hooks)
 - **TypeScript** (for static type checking)
 - **Vite** (for fast development and build tooling)
 - **Tailwind CSS** (utility-first CSS framework)
+- **React Router** (for routing)
+- **ESLint** (for code quality)
+- **React Icons** (for scalable vector icons)
 
 ---
 
 ## How to Navigate the App
 
-- The main entry point is `src/App.tsx`, which renders the layout.
-- The UI is divided into three main components:
-  - **Header:** Top navigation and branding.
-  - **Hero:** Main content section with call-to-action.
-  - **Footer:** Bottom section with additional info or links.
-- All components are located in the `src/components` directory.
-- Styles are managed using Tailwind CSS and custom CSS variables.
+- The main entry point is `src/main.tsx`, which sets up the router and renders the app.
+- All routes are defined in `src/App.tsx`.
+- The UI is composed of layout and UI components:
+  - **Header:** Top navigation and branding (`src/layouts/Header.tsx`)
+  - **Hero:** Main content section with call-to-action (`src/components/Hero.tsx`)
+  - **Footer:** Bottom section with additional info or links (`src/components/Footer.tsx`)
+- Reusable UI elements (e.g., Button, Logo) are in `src/components/ui/`.
+- Static data/constants are in `src/constants/`.
+- Images and assets are in `src/images/`.
+- Styles are managed using Tailwind CSS and custom CSS variables in `src/index.css`.
 
 ---
 
@@ -84,23 +90,24 @@ This app was built to demonstrate a professional approach to front-end developme
 ## Project Structure
 
 ```
-public/
+public/                # Static files and assets served directly
 src/
-  components/
-    Footer.tsx
-    Header.tsx
-    Hero.tsx
-  images/
-  layouts/
-    Header.tsx
-    HeroBottom.tsx
-    HeroTop.tsx
-  App.tsx
-  main.tsx
-  index.css
-  ...
+  components/          # Reusable presentational components
+    footer/            # Footer-related components (e.g., FooterSection)
+    ui/                # UI primitives (Button, Logo, etc.)
+  constants/           # Static data and configuration (e.g., navigation, footer items)
+  hooks/               # Custom React hooks
+  images/              # Image assets used in the app
+    hero-images/       # Images specific to the hero section
+  layouts/             # Layout-level components (Header, HeroTop, HeroBottom, etc.)
+  pages/               # Top-level route components (e.g., Home, Features)
+  types/               # Shared TypeScript types and interfaces
+  App.tsx              # Main application component, defines routes
+  index.css            # Global styles and Tailwind CSS imports
+  main.tsx             # App entry point, sets up React and the router
+
 ```
 
 ---
 
-Feel free to use this project as a starting point for your own landing pages or as a reference for scalable React app architecture.
+#Feel free to use this project as a starting point for your own landing pages or as a reference for scalable React app architecture.
