@@ -24,7 +24,14 @@ const FooterItems = ({ header, items }: FooterItemsProps) => {
 };
 
 function Footer() {
-  const platformItems = ["Plans and Prices", "AI Create Letters", "AI Resume Checker", "Resume Templates", "Sell Templates", "Blog"];
+  const platformItems = [
+    "Plans and Prices",
+    "AI Create Letters",
+    "AI Resume Checker",
+    "Resume Templates",
+    "Sell Templates",
+    "Blog",
+  ];
   const Features = ["AI Cover Letter Creator", "Resume Keywords Optimizer", "ATS Resume Checker"];
   const Resources = [
     "4 AI Tools for Applying a Job",
@@ -38,8 +45,8 @@ function Footer() {
       <div className="flex flex-col items-center text-center space-y-4">
         <h1 className="text-[var(--color-dark)] text-4xl md:text-6xl font-medium">What's next</h1>
         <p className="text-[var(--color-dark)] max-w-md">
-          Submit better job apps — 10x faster. AI cover letter generator, resume keyword checker, outreach message writer, and more. Powered
-          by GPT.
+          Submit better job apps — 10x faster. AI cover letter generator, resume keyword checker, outreach message
+          writer, and more. Powered by GPT.
         </p>
         <ButtonThird type="button" name="Try For Free" />
       </div>
@@ -54,10 +61,18 @@ function Footer() {
             <span className="text-sm font-medium">support@gmail.com</span>
           </div>
           <div className="flex gap-4">
-            <FaInstagram size={20} />
-            <FaFacebook size={20} />
-            <FaLinkedin size={20} />
-            <FaTelegram size={20} />
+            <a href="#instagram">
+              <FaInstagram size={20} />
+            </a>
+            <a href="#facebook">
+              <FaFacebook size={20} />
+            </a>
+            <a href="#linkedin">
+              <FaLinkedin size={20} />
+            </a>
+            <a href="#telegram">
+              <FaTelegram size={20} />
+            </a>
           </div>
         </div>
       </div>

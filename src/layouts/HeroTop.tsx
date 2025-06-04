@@ -2,7 +2,7 @@ import { Button, ButtonSecondary } from "../components/Button";
 import { ItemProps } from "../components/Hero";
 
 type TopPartProps = {
-  header: string;
+  subHeader: string;
   styledHeader?: string;
   description: string;
   display: "button" | "input";
@@ -12,17 +12,20 @@ type TopPartProps = {
   fontBold?: boolean;
 };
 
-export const TopPart = (props: TopPartProps) => {
+export const HeroTop = (props: TopPartProps) => {
   return (
     <>
       <header
         className={`flex flex-col text-6xl ${props.smallText ? "lg:text-5xl" : " lg:text-8xl"} ${
           props.shrinkText ? "w-full max-w-[400px]" : ""
-        } ${props.fontBold ? "font-medium" : ""} text-center leading-tight font-light font-sans`}>
-        <h1 className="text-[var(--color-green)]">{props.styledHeader}</h1>
-        <h1 className="text-[var(--color-white)]">{props.header}</h1>
+        } ${props.fontBold ? "font-medium" : "font-light"} text-center leading-tight font-sans`}
+      >
+        {props.styledHeader && <h1 className="text-[var(--color-green)]">{props.styledHeader}</h1>}
+        <h1 className="text-[var(--color-white)]">{props.subHeader}</h1>
       </header>
-      <p className="mt-5 px-1 md:px-0 text-[var(--color-lightGray)] text-center max-w-[400px] lg:max-w-[350px]">{props.description}</p>
+      <p className="mt-5 px-1 md:px-0 text-[var(--color-lightGray)] text-center max-w-[400px] lg:max-w-[350px]">
+        {props.description}
+      </p>
 
       {props.display === "input" && (
         <form className="w-full flex flex-col items-center mt-5">
@@ -46,7 +49,10 @@ export const TopPart = (props: TopPartProps) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 px-2 md:px-0 gap-3 lg:gap-7 py-4 lg:py-10 max-w-[700px] lg:max-w-[1200px] mt-10">
         {props.items.map((item, index) => (
-          <div key={index} className="p-3 lg:p-6 bg-[var(--color-accentGray)] rounded-lg w-full max-w-full lg:max-w-[300px]">
+          <div
+            key={index}
+            className="p-3 lg:p-6 bg-[var(--color-accentGray)] rounded-lg w-full max-w-full lg:max-w-[300px]"
+          >
             <img src={item.img} alt={item.title} className="w-fit h-auto" />
             <h2 className="mt-2 text-xl text-[var(--color-white)]">{item.title}</h2>
             <p className="mt-1 text-base text-[var(--color-lightGray)]">{item.paragraph}</p>

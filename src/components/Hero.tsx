@@ -1,6 +1,6 @@
 import project from "../images/hero-images/project.png";
 import overlay from "../images/hero-images/Overlay.png";
-import { TopPart } from "../layouts/HeroTop";
+import { HeroTop } from "../layouts/HeroTop";
 import mail from "../images/hero-images/mail.png";
 import git_pull from "../images/hero-images/git-pull-request.png";
 import send from "../images/hero-images/send.png";
@@ -45,7 +45,8 @@ const HeroTopItems2: ItemProps[] = [
   {
     img: coverletter,
     title: "Cover Letter",
-    paragraph: "A cover letter is a document that accompanies a job application and is written to introduce the applicant to the employer.",
+    paragraph:
+      "A cover letter is a document that accompanies a job application and is written to introduce the applicant to the employer.",
   },
   {
     img: mail,
@@ -82,12 +83,12 @@ const HeroTopItems2: ItemProps[] = [
 function Hero() {
   return (
     <section className="w-full flex flex-col justify-center items-center">
-      <TopPart
+      <HeroTop
+        styledHeader="Win your dream job"
         description="Submit better job app — 10x faster. AI cover letter generator, resume keyword checker, outreach message writer, and more. Powered by GPT"
         display="input"
-        header="with PostJob"
+        subHeader="with PostJob"
         items={HeroTopItems}
-        styledHeader="Win your dream job"
       />
 
       {/*Second Screen */}
@@ -101,15 +102,18 @@ function Hero() {
         </div>
         <div className="mt-30 px-1 lg:px-20 relative">
           <img src={project} className="w-full h-auto" alt="project photo" />
-          <div className="absolute inset-0 bg-cover bg-center mix-blend-color" style={{ backgroundImage: `url(${overlay})` }}></div>
+          <div
+            className="absolute inset-0 bg-cover bg-center mix-blend-color"
+            style={{ backgroundImage: `url(${overlay})` }}
+          ></div>
         </div>
       </div>
 
-      <TopPart
+      <HeroTop
         styledHeader=""
         items={HeroTopItems2}
         display="button"
-        header="Spend less time looking for work"
+        subHeader="Spend less time looking for work"
         description="We'll help you through the hardest part of your job search."
         smallText={true}
         shrinkText={true}
